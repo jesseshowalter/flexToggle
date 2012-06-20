@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>flexToggle demo</title>
+		<link rel="stylesheet" href="demo-styles.css">
+		<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+		<!-- Hat Tip: http://paulirish.com/2009/avoiding-the-fouc-v3/ -->
+	</head>
+	<body>
+		<h1>flexToggle demo</h1>
+		<p>flexToggle is a lightweight jQuery plugin that allows you to show or hide content when a toggle link is clicked. It's great for making expand/collapse boxes, disclosure triangles, drawers, and more!</p>
+		<p>Check it: <a href="https://github.com/352Media/flexToggle">https://github.com/352Media/flexToggle</a></p>
+		<h2>Basic example</h2>
+		<div>
+			<a href="#collapsible1" class="toggle">Toggle One</a>
+			<div class="collapsible" id="collapsible1">
+				<h3>Content One!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<div>
+			<a href="#collapsible2" class="toggle">Toggle Two</a>
+			<div class="collapsible" id="collapsible2">
+				<h3>Content Two!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		
+		<div>
+			<a href="#collapsible3" class="toggle">Toggle Three</a>
+			<div class="collapsible" id="collapsible3">
+				<h3>Content Three!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<h2>Fancy Example</h2>
+		<p>This one has animation, and the text changes when the toggle is clicked.</p>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="flextoggle.js"></script>
+		<script>
+			console.log($('a.toggle'));
+			$('a.toggle').flexToggle();
+		</script>
+	</body>
+</html>

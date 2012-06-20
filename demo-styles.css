@@ -1,0 +1,30 @@
+body {
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.collapsible {
+	display: none;
+}
+
+.collapsible.open {
+	display: block;
+}
+
+.no-js .collapsible {
+	display: block;
+}
+
+.toggle {
+	width: auto;
+	background-color: #ddd;
+	color: #000;
+	text-decoration: none;
+	padding: .5em;
+	display: inline-block;
+	margin-bottom: .5em
+}
+
+.toggle.active {
+	color: #fff;
+	background-color: #555;
+}
