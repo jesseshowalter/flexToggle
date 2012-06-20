@@ -60,7 +60,7 @@ string - Link text when drawer is open. If this or inactiveText are empty, don't
 ###inactiveText
 string - Link text when drawer is closed. If this or activeText are empty, don't change the text. By default, this is empty. 
 
-**Note:** The inactiveText should be included in the markup. For example, if your inactiveText is "Expand", you could write this: 
+**Note:** The inactiveText should be included in the markup. For example, if your inactiveText is "Expand" and your activeText is "Collapse", you could write this: 
 ```html
 <a href="#elementToOpen" class="toggle">Expand Item One</a>
 ```
