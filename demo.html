@@ -10,7 +10,7 @@
 		<h1>flexToggle demo</h1>
 		<p>flexToggle is a lightweight jQuery plugin that allows you to show or hide content when a toggle link is clicked. It's great for making expand/collapse boxes, disclosure triangles, drawers, and more!</p>
 		<p>Check it: <a href="https://github.com/352Media/flexToggle">https://github.com/352Media/flexToggle</a></p>
-		<h2>Basic example</h2>
+		<h2>Basic Example</h2>
 		<div>
 			<a href="#collapsible1" class="toggle">Toggle One</a>
 			<div class="collapsible" id="collapsible1">
@@ -52,12 +52,55 @@
 
 		<h2>Fancy Example</h2>
 		<p>This one has animation, and the text changes when the toggle is clicked.</p>
+		<div>
+			<a href="#fancyCollapsible1" class="fancyToggle">Show More</a>
+			<div class="collapsible" id="fancyCollapsible1">
+				<h3>Fancy Content 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<div>
+			<a href="#fancyCollapsible2" class="fancyToggle">Show More</a>
+			<div class="collapsible" id="fancyCollapsible2">
+				<h3>Fancy Content 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<div>
+			<a href="#fancyCollapsible3" class="fancyToggle">Show More</a>
+			<div class="collapsible" id="fancyCollapsible3">
+				<h3>Fancy Content 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<p class="credit">Coded with love in Atlanta by <a href="http://www.ryandebeasi.com/">Ryan DeBeasi</a>. A <a href="http://www.352media.com/">352 Media Group</a> doohickey.</p>
+
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="flextoggle.js"></script>
+		<script type="text/javascript" src="flextoggle.min.js"></script>
 		<script>
-			console.log($('a.toggle'));
 			$('a.toggle').flexToggle();
+			$('a.fancyToggle').flexToggle({
+				animation : 'slideDown',
+				activeText : 'Show Less',
+				inactiveText : 'Show More' 
+			});
 		</script>
 	</body>
 </html>

@@ -7,10 +7,10 @@
 		var s = $.extend({
 			'animation' : 'none',	// [string] How should we animate as it appears and disappears?
 									// Options are 'none' and 'slideDown'. Coming soon: 'slideRight'.
-			'bindValue' : false		// If you call flexMenu on a checkbox or radio button, you can bind
-									// the value of the input to the state of the drawer. If the value
-									// changes to true, the drawer opens. If the value changes  to 
-									// false, the drawer closes.
+			'activeText' : '',		// [string] Link text when drawer is open. If empty, don't
+									// change the text.
+			'inactiveText' : ''		// [string] Link text when drawer is closed. If empty, don't
+									// change the text.
 		}, options);
 		return this.each(function () {
 			var $drawerLink = $(this),
@@ -28,9 +28,12 @@
 			});
 		});
 		function openDrawer($drawer, $drawerLink) {
+			$drawerLink.addClass('active');	
+			if (s.activeText!='' && s.inactiveText!='') {
+				$drawerLink.text(s.activeText);
+			}
 			switch (s.animation) {
 				case 'slideDown':
-					$drawerLink.addClass('active');	
 					$drawer.slideDown(100, function() {
 						$drawer.addClass('open');
 					});
@@ -38,13 +41,15 @@
 				case 'none':
 				default:
 					$drawer.addClass('open');
-					$drawerLink.addClass('active');	
 			}
 		}
 		function closeDrawer($drawer, $drawerLink) {
+			$drawerLink.removeClass('active');
+			if (s.activeText!='' && s.inactiveText!='') {
+				$drawerLink.text(s.inactiveText);
+			}
 			switch (s.animation) {
 				case 'slideDown':
-					$drawerLink.removeClass('active');
 					$drawer.slideUp(100, function() {
 						$drawer.removeClass('open');
 					});
@@ -52,7 +57,6 @@
 				case 'none':
 				default:
 					$drawer.removeClass('open');
-					$drawerLink.removeClass('active');
 			}
 		}
 	};
