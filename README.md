@@ -60,7 +60,20 @@ string - Link text when drawer is open. If this or inactiveText are empty, don't
 ###inactiveText
 string - Link text when drawer is closed. If this or activeText are empty, don't change the text. By default, this is empty. 
 
-**Note:** The inactiveText should be included in the markup. For example, if your inactiveText is "Expand", you could write <a href="#elementToOpen" class="toggle">Expand Item One</a>. If there are multiple instances of this text, all of them will be toggled back and forth.  So, <a href="#elementToOpen" class="toggle Expand">Expand Item One</a> would become <a href="#elementToOpen" class="toggle Collapse">Collapse Item One</a> when the link is clicked.
+**Note:** The inactiveText should be included in the markup. For example, if your inactiveText is "Expand", you could write this: 
+```html
+<a href="#elementToOpen" class="toggle">Expand Item One</a>
+```
+
+If there are multiple instances of this text, all of them will be toggled back and forth. So this...
+```html
+<a href="#elementToOpen" class="toggle Expand">Expand Item One</a>
+```
+
+...would become this when the link is clicked:
+```html
+<a href="#elementToOpen" class="toggle Collapse">Collapse Item One</a>
+```
 
 ##License
 
