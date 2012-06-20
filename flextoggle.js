@@ -12,6 +12,7 @@
 			'inactiveText' : ''		// [string] Link text when drawer is closed. If empty, don't
 									// change the text.
 		}, options);
+
 		return this.each(function () {
 			var $drawerLink = $(this),
 			$drawer = $($drawerLink.attr('href'));
@@ -28,9 +29,11 @@
 			});
 		});
 		function openDrawer($drawer, $drawerLink) {
+			var newText;
 			$drawerLink.addClass('active');	
 			if (s.activeText!='' && s.inactiveText!='') {
-				$drawerLink.text(s.activeText);
+				newText = $drawerLink.html().replace(s.inactiveText, s.activeText);
+				$drawerLink.html(newText);
 			}
 			switch (s.animation) {
 				case 'slideDown':
@@ -46,7 +49,8 @@
 		function closeDrawer($drawer, $drawerLink) {
 			$drawerLink.removeClass('active');
 			if (s.activeText!='' && s.inactiveText!='') {
-				$drawerLink.text(s.inactiveText);
+				newText = $drawerLink.html().replace(s.activeText, s.inactiveText);
+				$drawerLink.html(newText);
 			}
 			switch (s.animation) {
 				case 'slideDown':

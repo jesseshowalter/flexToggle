@@ -51,9 +51,9 @@
 		</div>
 
 		<h2>Fancy Example</h2>
-		<p>This one has animation, and the text changes when the toggle is clicked.</p>
+		<p>This one has animation, and the text changes when the toggle is clicked. The top toggle link in this set has a span tag inside of it. The span tag doesn't do anything; it's just there to show that flexToggle won't eat your span tags.</p>
 		<div>
-			<a href="#fancyCollapsible1" class="fancyToggle">Show More</a>
+			<a href="#fancyCollapsible1" class="fancyToggle"><span>Show More One</span></a>
 			<div class="collapsible" id="fancyCollapsible1">
 				<h3>Fancy Content 1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		<div>
-			<a href="#fancyCollapsible2" class="fancyToggle">Show More</a>
+			<a href="#fancyCollapsible2" class="fancyToggle">Show More Two</a>
 			<div class="collapsible" id="fancyCollapsible2">
 				<h3>Fancy Content 2</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 		<div>
-			<a href="#fancyCollapsible3" class="fancyToggle">Show More</a>
+			<a href="#fancyCollapsible3" class="fancyToggle">Show More Three</a>
 			<div class="collapsible" id="fancyCollapsible3">
 				<h3>Fancy Content 3</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -93,7 +93,7 @@
 
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="flextoggle.min.js"></script>
+		<script type="text/javascript" src="flextoggle.js"></script>
 		<script>
 			$('a.toggle').flexToggle();
 			$('a.fancyToggle').flexToggle({

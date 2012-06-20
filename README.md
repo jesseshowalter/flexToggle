@@ -49,6 +49,8 @@ $('a.toggle').flexToggle();
 
 ##Options
 
+For examples of how these can be used, see the demo page that's included with flexToggle.
+
 ###animation
 string - How should we animate as it appears and disappears? Options are 'none' and 'slideDown'. Default is 'none'.
 
@@ -56,9 +58,9 @@ string - How should we animate as it appears and disappears? Options are 'none' 
 string - Link text when drawer is open. If this or inactiveText are empty, don't change the text. By default, this is empty.
 
 ###inactiveText
-string - Link text when drawer is closed. If this or activeText are empty, don't change the text. By default, this is empty.
+string - Link text when drawer is closed. If this or activeText are empty, don't change the text. By default, this is empty. 
 
-For examples of how these can be used, see the demo page that's included with flexToggle.
+**Note:*** The inactiveText should be included in the markup. For example, if your inactiveText is "Expand", you could write <a href="#elementToOpen" class="toggle">Expand Item One</a>. If there are multiple instances of this text, all of them will be toggled back and forth.  So, <a href="#elementToOpen" class="toggle Expand">Expand Item One</a> would become <a href="#elementToOpen" class="toggle Collapse">Collapse Item One</a> when the link is clicked.
 
 ##License
 
