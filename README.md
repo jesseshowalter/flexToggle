@@ -10,17 +10,17 @@ Written by [Ryan DeBeasi](http://www.ryandebeasi.com/) of [352 Media Group](http
 
 Create a link that will function as the trigger, along with a div that will be collapsed or expanded when the trigger is clicked. Point the link of the trigger to the ID of the div.
 
-'''html
+```html
 <a href="#collapsible1" class="toggle">Toggle One</a>
 <div class="collapsible" id="collapsible1">Content</div>
 
 <a href="#collapsible2" class="toggle">Toggle One</a>
 <div class="collapsible" id="collapsible2">Content</div>
-'''
+```
 
-In CSS, set the collapsible elements to be hidden, and set them to be displayed when they are open. If JavaScript is not available, you can use a [no-js class](http://paulirish.com/2009/avoiding-the-fouc-v3/) to open the collapsible elements.
+In CSS, set the collapsible elements to be hidden, and set them to be displayed when they are open. If JavaScript is not available, you can use a [no-js class](http://paulirish.com/2009/avoiding-the-fouc-v3/) to open the collapsible elements
 
-'''css
+```css
 .collapsible {
 	display: none;
 }
@@ -32,20 +32,20 @@ In CSS, set the collapsible elements to be hidden, and set them to be displayed 
 .no-js .collapsible {
 	display: block;
 }
-'''
+```
 
 Include jQuery and flexToggle.
 
-'''html
+```html
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="flextoggle.min.js"></script>
-'''
+```
 
 Then, call flexToggle.
 
-'''javascript
+```javascript
 $('a.toggle').flexToggle();
-'''
+```
 
 ##Options
 
