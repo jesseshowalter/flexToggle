@@ -18,7 +18,7 @@ Create a link that will function as the trigger, along with a div that will be c
 <div class="collapsible" id="collapsible2">Content</div>
 ```
 
-In CSS, set the collapsible elements to be hidden, and set them to be displayed when they are open. If JavaScript is not available, you can use a [no-js class](http://paulirish.com/2009/avoiding-the-fouc-v3/) to open the collapsible elements
+In CSS, set the collapsible elements to be hidden, and set them to be displayed when they are open. If JavaScript is not available, you can use a [no-js class](http://paulirish.com/2009/avoiding-the-fouc-v3/) to open the collapsible elements:
 
 ```css
 .collapsible {
@@ -50,13 +50,13 @@ $('a.toggle').flexToggle();
 ##Options
 
 ###animation
-string - How should we animate as it appears and disappears? Options are 'none' and 'slideDown'.
+string - How should we animate as it appears and disappears? Options are 'none' and 'slideDown'. Default is 'none'.
 
 ###activeText
-string - Link text when drawer is open. If empty, don't change the text.
+string - Link text when drawer is open. If this or inactiveText are empty, don't change the text. By default, this is empty.
 
 ###inactiveText
-string - Link text when drawer is closed. If empty, don't change the text.
+string - Link text when drawer is closed. If this or activeText are empty, don't change the text. By default, this is empty.
 
 For examples of how these can be used, see the demo page that's included with flexToggle.
 
