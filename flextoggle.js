@@ -1,6 +1,7 @@
 /* 	jQuery.flexToggle
 	Author: Ryan DeBeasi (352 Media Group) - http://www.352media.com/
-	Description:  Shows/hides a block of content when a toggle link is clicked. You can use this to build drawers, expand/collapse boxes, etc. */
+	Description:  Shows/hides a block of content when a toggle link is clicked. You can use this to build drawers, expand/collapse boxes, etc. 
+	URL: https://github.com/352Media/flexToggle/ */
 
 (function ($) {
 	$.fn.flexToggle = function (options) {
