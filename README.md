@@ -14,8 +14,17 @@ Create a link that will function as the trigger, along with a div that will be c
 <a href="#collapsible1" class="toggle">Toggle One</a>
 <div class="collapsible" id="collapsible1">Content</div>
 
-<a href="#collapsible2" class="toggle">Toggle One</a>
+<a href="#collapsible2" class="toggle">Toggle Two</a>
 <div class="collapsible" id="collapsible2">Content</div>
+```
+
+Alternately, create radio buttons or checkboxes with similar markup:
+```html
+<input type="radio" name="radioToggle" id="radioToggle1" data-flex-toggle-target="#radioCollapsible1" class="radioToggle"><label for="radioToggle1">Radio Toggle One</label>
+<div class="collapsible" id="radioCollapsible1">Content</div>
+
+<input type="radio" name="radioToggle" id="radioToggle2" data-flex-toggle-target="#radioCollapsible2" class="radioToggle"><label for="radioToggle2">Radio Toggle Two</label>
+<div class="collapsible" id="radioCollapsible2">Content</div>
 ```
 
 In CSS, set the collapsible elements to be hidden, and set them to be displayed when they are open. If JavaScript is not available, you can use a [no-js class](http://paulirish.com/2009/avoiding-the-fouc-v3/) to open the collapsible elements:
@@ -47,6 +56,8 @@ Then, call flexToggle.
 $('a.toggle').flexToggle();
 ```
 
+See the demo page (included with flexToggle) for more examples.
+
 ##Options
 
 For examples of how these can be used, see the demo page that's included with flexToggle.
@@ -74,6 +85,9 @@ If there are multiple instances of this text, all of them will be toggled back a
 ```html
 <a href="#elementToOpen" class="toggle Collapse">Collapse Item One</a>
 ```
+
+###afterToggle
+function - Callback to be called after the drawer is opened or closed. In the context of the callback, "this" is the link, radio button, or checkbox that was clicked.
 
 ##License
 

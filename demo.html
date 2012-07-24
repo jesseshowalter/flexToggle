@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>flexToggle demo</h1>
-		<p>flexToggle is a lightweight jQuery plugin that allows you to show or hide content when a toggle link is clicked. It's great for making expand/collapse boxes, disclosure triangles, drawers, and more!</p>
+		<p>flexToggle is a lightweight, flexible jQuery plugin that allows you to show or hide content when a toggle link is clicked. It's great for making expand/collapse boxes, disclosure triangles, drawers, and more!</p>
 		<p>Check it: <a href="https://github.com/352Media/flexToggle">https://github.com/352Media/flexToggle</a></p>
 		<h2>Basic Example</h2>
 		<div>
@@ -89,17 +89,125 @@
 			</div>
 		</div>
 
+		<form action="">
+			<h2>Radio Button Example</h2>
+			<p>This one shows and hides content based on the state of a radio button. Works with checkboxes too!</p>
+			<div>
+				<input type="radio" name="radioToggle" id="radioToggle1" data-flex-toggle-target="#radioCollapsible1" class="radioToggle"><label for="radioToggle1">Radio Toggle One</label>
+			</div>
+			<div class="collapsible" id="radioCollapsible1">
+				<h3>Radio Content One</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div>
+				<input type="radio" name="radioToggle" id="radioToggle2" data-flex-toggle-target="#radioCollapsible2" class="radioToggle"><label for="radioToggle2">Radio Toggle Two</label>
+			</div>
+			<div class="collapsible" id="radioCollapsible2">
+				<h3>Radio Content Two</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div>
+				<input type="radio" name="radioToggle" id="radioToggle3" data-flex-toggle-target="#radioCollapsible3" class="radioToggle"><label for="radioToggle3">Radio Toggle Three</label>
+			</div>
+			<div class="collapsible" id="radioCollapsible3">
+				<h3>Radio Content 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<h2>Radio Button "Other" Example</h2>
+			<p>Not every radio button in a group needs to show content. You could, for example, use flexToggle to show a textbox if the user chooses "other."</p>
+			<h3>What would you like to eat?</h3>
+			<div>
+				<input type="radio" name="otherToggle" id="otherToggle1" class=""><label for="otherToggle1">Pizza</label>
+			</div>
+			<div>
+				<input type="radio" name="otherToggle" id="otherToggle2" class=""><label for="otherToggle2">Veggies</label>
+			</div>
+			<div>
+				<input type="radio" name="otherToggle" id="otherToggle3" class=""><label for="otherToggle3">Cake</label>
+			</div>
+			<div>
+				<input type="radio" name="otherToggle" id="otherToggle4" data-flex-toggle-target="#otherCollapsible" class="radioToggle"><label for="otherToggle4">Other...</label>
+			</div>
+			<div class="collapsible" id="otherCollapsible">
+				<label for="specify">Please Specify: </label><input type="text" id="specify">
+			</div>
+		</form>
+		
+		<h2>Callbacks</h2>
+		<p>flexToggle also accepts a callback function, <code>afterToggle</code>, that is called after a collapsible area is opened or closed.</p>
+
+		<div>
+			<a href="#callbackCollapsible1" class="callbackToggle">Toggle One</a>
+			<div class="collapsible" id="callbackCollapsible1">
+				<h3>Content One!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+		<div>
+			<a href="#callbackCollapsible2" class="callbackToggle">Toggle Two</a>
+			<div class="collapsible" id="callbackCollapsible2">
+				<h3>Content Two!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		
+		<div>
+			<a href="#callbackCollapsible3" class="callbackToggle">Toggle Three</a>
+			<div class="collapsible" id="callbackCollapsible3">
+				<h3>Content Three!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
 		<p class="credit">Coded with love in Atlanta by <a href="http://www.ryandebeasi.com/">Ryan DeBeasi</a>. A <a href="http://www.352media.com/">352 Media Group</a> doohickey.</p>
 
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="flextoggle.js"></script>
+		<script type="text/javascript" src="flextoggle.min.js"></script>
 		<script>
 			$('a.toggle').flexToggle();
-			$('a.fancyToggle').flexToggle({
+			$('a.fancyToggle,input.radioToggle').flexToggle({
 				animation : 'slideDown',
 				activeText : 'Show Less',
 				inactiveText : 'Show More' 
+			});
+			$('a.callbackToggle').flexToggle({
+				animation : 'slideDown',
+				afterToggle : function () {
+					alert('Hello from ' + this.getAttribute('id') + '!');
+				}
 			});
 		</script>
 	</body>

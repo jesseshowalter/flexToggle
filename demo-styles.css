@@ -14,7 +14,7 @@ body {
 	display: block;
 }
 
-.toggle, .fancyToggle {
+.toggle, .fancyToggle, .callbackToggle {
 	width: auto;
 	background-color: #ddd;
 	color: #000;
