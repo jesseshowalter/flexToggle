@@ -20,10 +20,12 @@ Create a link that will function as the trigger, along with a div that will be c
 
 Alternately, create radio buttons or checkboxes with similar markup:
 ```html
-<input type="radio" name="radioToggle" id="radioToggle1" data-flex-toggle-target="#radioCollapsible1" class="radioToggle"><label for="radioToggle1">Radio Toggle One</label>
+<input type="radio" name="radioToggle" id="radioToggle1" data-flex-toggle-target="#radioCollapsible1" class="toggle">
+<label for="radioToggle1">Radio Toggle One</label>
 <div class="collapsible" id="radioCollapsible1">Content</div>
 
-<input type="radio" name="radioToggle" id="radioToggle2" data-flex-toggle-target="#radioCollapsible2" class="radioToggle"><label for="radioToggle2">Radio Toggle Two</label>
+<input type="radio" name="radioToggle" id="radioToggle2" data-flex-toggle-target="#radioCollapsible2" class="toggle">
+<label for="radioToggle2">Radio Toggle Two</label>
 <div class="collapsible" id="radioCollapsible2">Content</div>
 ```
 
@@ -53,7 +55,7 @@ Include jQuery and flexToggle.
 Then, call flexToggle.
 
 ```javascript
-$('a.toggle').flexToggle();
+$('.toggle').flexToggle();
 ```
 
 See the demo page (included with flexToggle) for more examples.
